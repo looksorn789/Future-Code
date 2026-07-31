@@ -1,9 +1,11 @@
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+
 function App() {
-  return(
-    <div className="flex min-h-screen items-center justify-center">
-      <h1 className="text-5x1 font-bold text-blue600">
-        InterviewPrep Ai</h1>
-    </div>
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+    </Routes>
   );
 }
 
