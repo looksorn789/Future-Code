@@ -1,93 +1,147 @@
-# InterviewPrepAi
+# InterviewPrepAI
 
 ## Overview
 
-InterviewPrep AI is a full-stack web application designed to help software engineering candidates prepare for technical and behavioral interviews using AI-powered feedback.
+InterviewPrepAI is a full-stack AI-powered interview preparation platform designed to help software engineering candidates prepare for technical and behavioral interviews.
 
-The platform analyzes a user's resume, generates personalized interview plans, conducts mock interviews, and tracks progress over time. It is being built with scalability and cloud deployment in mind using modern software engineering practices and AWS infrastructure.
+The platform uses a user's resume, career goals, and preparation history to generate personalized interview experiences, including technical questions, coding challenges, mock interviews, and AI-powered feedback.
 
-This project serves as a demonstration of production-ready software development, including authentication, cloud storage, containerization, automated deployment, and scalable backend architecture.
-An AI-powered interview preparation platform that generates personalized technical and behavioral interviews based on a user's resume and career goals. 
+The project is being developed with a focus on practical AI engineering, scalable backend architecture, and cloud deployment.
 
 ## Features (Planned)
 
 ### Authentication
-* Secure user authentication with Amazon Cognito
-* Google and GitHub OAuth
-* Email verification and password recovery
-* Protected routes and role-based authorization
+
+- Secure user authentication with Amazon Cognito
+- Google and GitHub OAuth
+- Email verification and password recovery
+- Protected routes and role-based authorization
 
 ### Resume Analysis
-* Upload resumes securely to Amazon S3
-* Extract skills, education, projects, and technologies using AI
-* Generate a personalized user profile
+
+- Upload resumes securely to Amazon S3
+- Extract skills, education, projects, and technologies using AI
+- Generate a personalized user profile
+- Use resume information to personalize interview preparation
 
 ### Personalized Interview Plans
-Generate interview questions tailored to:
-* Python
-* SQL
-* Data Structures & Algorithms
-* System Design
-* Behavioral Interviews
-Interview plans are customized using the user's resume and desired job role.
 
-### Ai Coding Coach
+Generate interview questions tailored to a user's:
+
+- Programming languages
+- SQL knowledge
+- Data Structures & Algorithms
+- System Design
+- Behavioral interview experience
+- Desired job role
+
+Interview plans are customized using the user's resume, career goals, and areas for improvement.
+
+### AI Coding Coach
+
 Practice coding interview questions with AI-assisted guidance.
 
 Features include:
 
-* Personalized coding challenges
-* Step-by-step hints
-* Explanation of optimal solutions
-* Follow-up questions based on common interview scenarios
-* Mock Interviews
+- Personalized coding challenges
+- Step-by-step hints
+- Explanation of optimal solutions
+- Follow-up questions
+- AI-generated feedback on solutions
 
-### Conduct AI-powered mock interviews covering:
+### AI Mock Interviews
 
-* Behavioral questions
-* Technical questions
-* Coding interviews
-* Role-specific interview questions
+Conduct AI-powered mock interviews covering:
 
-After each session, receive detailed feedback and improvement suggestions.
+- Behavioral questions
+- Technical questions
+- Coding interviews
+- Role-specific interview questions
+
+After each session, the AI provides detailed feedback, identifies areas for improvement, and suggests topics to practice.
 
 ### Progress Dashboard
 
-Track your interview preparation through:
+Track interview preparation through:
 
-* Questions completed
-* Mock interviews taken
-* Strengths and weaknesses
-* Progress charts
-* Learning streaks
+- Questions completed
+- Coding challenges completed
+- Mock interviews taken
+- Strengths and weaknesses
+- Progress charts
+- Learning streaks
 
-## Tech Stack/Technologies used
+## Tech Stack
 
-Frontend
-* React
-* TypeScript
-* Tailwind CSS
-* Vite
+### Frontend
 
-Backend
-* ASP.NET Core Web API
-* Entity Framework Core
-* PostgreSQL
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
 
+### Backend
 
-Cloud
-* AWS Cognito
-* Amazon EC2
-* Amazon S3
-* Amazon RDS
-* CloudFront
-* Route 53
-* AWS Certificate Manager
+- Python
+- Flask
+- SQLAlchemy
+- PostgreSQL
 
-DevOps
-* Docker
-* GitHub Actions
-* Nginx
+### AI
 
-AI
-* OpenAI API
+- Python
+- OpenAI API
+- LLM-based interview generation
+- Resume analysis
+- AI-powered feedback
+
+### Cloud
+
+- AWS Cognito
+- Amazon S3
+- Amazon EC2
+- Amazon RDS
+- CloudFront
+- Route 53
+- AWS Certificate Manager
+
+### DevOps
+
+- Docker
+- GitHub Actions
+- Nginx
+
+## Architecture
+
+InterviewPrepAI follows a client-server architecture where the React frontend communicates with a Flask REST API backend.
+
+The backend is responsible for:
+
+- API endpoints
+- Authentication
+- Business logic
+- Database operations
+- AI integrations
+- Resume processing
+- Cloud storage
+
+See the [architecture documentation](./docs/ARCHITECTURE.md) for more information.
+
+## Project Status
+
+InterviewPrepAI is currently under active development.
+
+The project is being developed incrementally, starting with the core application architecture and backend infrastructure before implementing the AI-powered features.
+
+## Goals
+
+The primary goal of InterviewPrepAI is to provide a practical environment for developing and demonstrating skills in:
+
+- Full-stack web development
+- AI application development
+- REST API design
+- Database design
+- LLM integration
+- Cloud infrastructure
+- Software architecture
+- Containerization and deployment
