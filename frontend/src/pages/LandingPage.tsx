@@ -1,15 +1,15 @@
-import InterviewPrepAi from "../assets/InterviewPrepAi_Logo.png"
 
 function LandingPage(){
 
-
-
     return(
-        <div className="bg-[#0B1020]">
-            <img src={InterviewPrepAi} alt="InterviewPrepAi Logo" />
+        <div className="bg-gray-900 min-h-screen">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-red-300 text-center">Testing centered text</h1>
+            </div>
         </div>
-    );
-
+        
+    )
 }
+
 
 export default LandingPage;

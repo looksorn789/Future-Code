@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-page-gray: #f3f4f6;
+  --color-page-dark: #1f2937;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    min-height: 100%;
+}

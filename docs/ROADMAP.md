@@ -1,4 +1,4 @@
-# InterviewPrep AI Roadmap
+# Future Code Roadmap
 
 ## Phase 1 - Project Planning
 - [x] Initialize React

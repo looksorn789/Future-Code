@@ -1,8 +1,8 @@
-# InterviewPrepAI
+# Future Code
 
 ## Overview
 
-InterviewPrepAI is a full-stack AI-powered interview preparation platform designed to help software engineering candidates prepare for technical and behavioral interviews.
+Future Code is a full-stack AI-powered interview preparation platform designed to help software engineering candidates prepare for technical and behavioral interviews.
 
 The platform uses a user's resume, career goals, and preparation history to generate personalized interview experiences, including technical questions, coding challenges, mock interviews, and AI-powered feedback.
 
@@ -113,7 +113,7 @@ Track interview preparation through:
 
 ## Architecture
 
-InterviewPrepAI follows a client-server architecture where the React frontend communicates with a Flask REST API backend.
+Future Code follows a client-server architecture where the React frontend communicates with a Flask REST API backend.
 
 The backend is responsible for:
 
@@ -129,13 +129,13 @@ See the [architecture documentation](./docs/ARCHITECTURE.md) for more informatio
 
 ## Project Status
 
-InterviewPrepAI is currently under active development.
+Future Code is currently under active development.
 
 The project is being developed incrementally, starting with the core application architecture and backend infrastructure before implementing the AI-powered features.
 
 ## Goals
 
-The primary goal of InterviewPrepAI is to provide a practical environment for developing and demonstrating skills in:
+The primary goal of Future Code is to provide a practical environment for developing and demonstrating skills in:
 
 - Full-stack web development
 - AI application development

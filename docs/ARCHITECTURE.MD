@@ -1,6 +1,6 @@
 # Architecture
 
-InterviewPrepAI is a cloud-native full-stack web application that helps
+Future Code is a cloud-native full-stack web application that helps
 software engineering candidates prepare for technical interviews using
 AI-powered tools such as resume analysis, mock interviews, coding
 challenges, and personalized feedback.
