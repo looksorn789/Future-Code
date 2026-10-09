@@ -33,16 +33,16 @@ future-code/
 
 ```
 backend/
-├── run.py                   # Entry point — starts the Flask dev server
+├── run.py                   # (planned) Entry point; for now run `flask --app app:create_app run`
 ├── app.py                   # Application factory (create_app), registers blueprints & extensions
-├── config.py                # Config classes (Development / Testing / Production) loaded from env vars
-├── extensions.py            # (planned) Shared instances: db (SQLAlchemy), migrate, cors, jwt
+├── config.py                # Config loaded from env vars (planned: Development / Testing / Production classes)
+├── extensions.py            # Shared instances: db (SQLAlchemy), migrate, cors
 ├── requirements.txt         # Python dependencies
 ├── .env.example             # Template for required environment variables (copy to .env)
 ├── Dockerfile               # (planned) Backend container image
 │
 ├── routes/                  # API endpoints (Flask Blueprints), one file per resource
-│   ├── auth.py              # Login, signup, token refresh, OAuth callbacks (Cognito)
+│   ├── auth.py              # register, login, refresh, logout, logout-all, me (+ planned OAuth callbacks)
 │   ├── users.py             # (planned) User profile endpoints
 │   ├── resumes.py           # (planned) Resume upload / retrieval / analysis
 │   ├── interviews.py        # (planned) Interview plans & mock interview sessions
@@ -51,6 +51,7 @@ backend/
 │
 ├── models/                  # (planned) SQLAlchemy database models
 │   ├── user.py
+│   ├── session.py           # Login sessions: hashed session tokens, expiry, revocation
 │   ├── resume.py
 │   ├── interview.py         # Interview plans, sessions, questions, answers
 │   ├── coding_challenge.py
@@ -59,7 +60,7 @@ backend/
 ├── schemas/                 # (planned) Request validation & response serialization
 │
 ├── services/                # (planned) Business logic — routes stay thin and call these
-│   ├── auth_service.py      # Cognito token verification, user sync
+│   ├── auth_service.py      # Password hashing, issue JWTs, create/rotate/revoke sessions, OAuth user sync
 │   ├── s3_service.py        # Resume upload/download with Amazon S3
 │   ├── resume_service.py    # Resume parsing & profile generation
 │   ├── interview_service.py
@@ -72,7 +73,9 @@ backend/
 │   ├── question_generator.py# Personalized interview / coding questions
 │   └── feedback.py          # AI feedback on answers and mock interviews
 │
-├── utils/                   # (planned) Helpers: decorators (e.g. @login_required), errors, validators
+├── utils/                   # (planned) Helpers
+│   ├── auth.py              # @login_required, @role_required, get_current_user()
+│   └── errors.py            # Consistent JSON error responses
 ├── migrations/              # (planned) Flask-Migrate / Alembic database migrations
 └── tests/                   # (planned) pytest tests, mirroring the folders above
 ```
@@ -85,7 +88,7 @@ HTTP request → routes/ → services/ → models/ (PostgreSQL)
                               └────→ AWS      (S3, Cognito)
 ```
 
-- **routes** handle HTTP only: parse input, call a service, return JSON.
+- **routes** handle HTTP only: parse input, call a service, return JSON. Protected routes are wrapped with decorators from `utils/auth.py` (see [SECURITY.MD](./SECURITY.MD)).
 - **services** hold the business logic and are the only layer that talks to models, AI, and AWS.
 - **models** define database tables and relationships.
 

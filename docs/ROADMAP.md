@@ -24,7 +24,9 @@
 - [ ] AWS Cognito
 - [ ] Google OAuth
 - [ ] GitHub OAuth
-- [ ] JWT authentication
+- [ ] JWT access tokens + revocable session tokens (see SECURITY.MD)
+- [ ] `@login_required` / `@role_required` decorators
+- [ ] Rate limiting on auth endpoints
 - [ ] Amazon S3 integration
 - [ ] Role-based authorization
 
